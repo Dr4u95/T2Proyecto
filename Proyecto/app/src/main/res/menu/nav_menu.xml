@@ -13,4 +13,9 @@
         android:icon="@drawable/ic_info"
         android:title="">
     </item>
+    <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="">
+    </item>
 </menu>

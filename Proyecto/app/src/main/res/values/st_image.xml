@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Rounded">
+        <item name= "cornerSize">50%</item>
+    </style>
+    
+    <style name="Diamond">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+    <style name="Cut">
+        <item name="cornerSize">20%</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+</resources>

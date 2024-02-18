@@ -34,6 +34,9 @@ class AppActivity : AppCompatActivity() {
                 R.id.info -> {
                     loadFragment(InfoFragment.newInstance())
                     true}
+                R.id.calendar -> {
+                    loadFragment(CalendarFragment.newInstance())
+                    true}
                 else -> false
             }
         }

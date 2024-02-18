@@ -67,6 +67,7 @@
     <string name="otro">Otro</string>
     <string name="nombre">Nombre</string>
     <string name="url_foto">Url Foto</string>
+    <string name="has_pulsado_5_fechas_diferentes">Has pulsado 5 fechas diferentes</string>
 
     <string-array name="mundos_star_wars">
         <item> Tatooine </item>
