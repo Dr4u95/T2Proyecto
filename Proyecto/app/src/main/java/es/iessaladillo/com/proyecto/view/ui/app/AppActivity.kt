@@ -14,8 +14,8 @@ class AppActivity : AppCompatActivity() {
         binding = ActivityAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupViews()
+        loadFragment(HomeFragment.newInstance())
     }
-
     private fun setupViews() {
         configureBottomNavigationView()
     }

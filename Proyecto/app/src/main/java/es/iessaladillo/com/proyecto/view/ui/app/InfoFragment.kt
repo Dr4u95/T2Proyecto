@@ -20,7 +20,14 @@ class InfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentInfoBinding.inflate(inflater, container, false)
+        setupViews()
         return binding.root
+    }
+
+    private fun setupViews() {
+        with(binding.webView){
+            loadUrl("https://es.wikipedia.org/wiki/Star_Wars")
+        }
     }
 
     override fun onDestroyView() {

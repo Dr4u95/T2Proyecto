@@ -26,10 +26,9 @@
             app:layout_constraintGuide_percent="0.85" />
 
         <ImageView
-            android:id="@+id/imgItem"
+            android:id="@+id/imgItemEnemy"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/guideline30"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +36,7 @@
 
 
         <TextView
-            android:id="@+id/nameItem"
+            android:id="@+id/nameItemEnemy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/blackopsregular"
@@ -46,31 +45,8 @@
             app:layout_constraintEnd_toStartOf="@id/guideline75"
             app:layout_constraintStart_toStartOf="@id/guideline30"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btnDelete"/>
-
-
-        <ImageButton
-            android:layout_marginBottom="5dp"
-            android:id="@+id/btnDelete"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_delete"
-            android:background="#F43122"
-            app:layout_constraintEnd_toStartOf="@id/guideline75"
-            app:layout_constraintStart_toStartOf="@id/guideline30"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-        <ImageButton
-            android:layout_marginEnd="5dp"
-            android:id="@+id/btnGo"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_next"
-            android:background="@color/yellow"
-            app:layout_constraintStart_toEndOf="@id/guideline75"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
