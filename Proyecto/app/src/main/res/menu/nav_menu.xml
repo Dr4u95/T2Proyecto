@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title=""  />
+    <item
+        android:id="@+id/battle"
+        android:icon="@drawable/baseline_fort_24"
+        android:title="" />
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_info"
+        android:title="">
+    </item>
+</menu>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/nameItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/blackopsregular"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline75"
+            app:layout_constraintStart_toStartOf="@id/guideline30"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnDelete"/>
+
+
+        <ImageButton
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btnDelete"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_delete"
+            android:background="#F43122"
+            app:layout_constraintEnd_toStartOf="@id/guideline75"
+            app:layout_constraintStart_toStartOf="@id/guideline30"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <ImageButton
+            android:layout_marginEnd="5dp"
+            android:id="@+id/btnGo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_next"
+            android:background="@color/yellow"
+            app:layout_constraintStart_toEndOf="@id/guideline75"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1094028304566",
+    "project_id": "proyectostarwars-4de24",
+    "storage_bucket": "proyectostarwars-4de24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094028304566:android:eaac80e7b50728e9ee8617",
+        "android_client_info": {
+          "package_name": "es.iessaladillo.com.proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcXOcsmA8T2NY3IY-tDR4KrfDvJoTlCT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

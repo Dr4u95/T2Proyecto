@@ -5,13 +5,20 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 
-    <style name="Title">
-        <item name="android:textSize">36sp</item>
-        <item name="android:textColor">@color/white</item>
+    <style name="TextTitle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/blackopsregular</item>
+        <item name="android:textColor">@color/yellow_dark</item>
         <item name="android:textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="Image">
-        <item name="android:background">@drawable/ic_dark_mode</item>
+    <style name="Background_app">
+        <item name="android:background">@drawable/background_shape_dark</item>
+    </style>
+
+    <style name="Cardview_Border">
+        <item name="cardBackgroundColor">#80040404</item>
+        <item name="cardCornerRadius">25dp</item>
     </style>
 </resources>

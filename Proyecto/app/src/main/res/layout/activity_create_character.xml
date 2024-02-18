@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Background_app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="25dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="25dp"
+    tools:context=".view.ui.create_character.CreateCharacterActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameCharacterInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:counterTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/nameCharacterTxte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombre"
+                    android:inputType="text"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/atvMundoNatal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="Mundo Natal"
+                android:paddingVertical="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/afiliacion"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rgAffiliation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/rbAlianza"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/alianza"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rbImperio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/imperio"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rbOtro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/otro"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/conflictos_en_que_ha_participado"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipFights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ChipGuerrasClon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clon"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGuerraCivilGalactica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/civil_galactica"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGuerrasMandalorianas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/mandalorianas"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ChipBatallaCoruscant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coruscant"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBatallaGeonosis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/geonosis"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBatallaMustafar"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mustafar"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/chip_state" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <CheckBox
+                android:id="@+id/CheckBoxIsLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:buttonTint="@color/white"
+                android:paddingVertical="10dp"
+                android:text="@string/es_sensible_a_la_fuerza"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView
+                android:id="@+id/atvArmamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/armamento"
+                android:paddingVertical="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/altura"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp" />
+
+                    <NumberPicker
+                        android:id="@+id/nPickerAltura"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:theme="@style/NumberPick" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/peso"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp" />
+
+                    <NumberPicker
+                        android:id="@+id/nPickerPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:theme="@style/NumberPick" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/valor_de_su_cabeza"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"/>
+
+            <RatingBar
+                android:id="@+id/ratingValorCabeza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressBackgroundTint="@color/grey"
+                android:progressTint="@color/yellow"
+                android:secondaryProgressTint="@color/white"
+                android:rating="2.5"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:isIndicator="false"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAddandExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/yellow"
+                android:src="@drawable/ic_add_24" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
