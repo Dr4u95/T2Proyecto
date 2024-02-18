@@ -13,7 +13,12 @@ class EnemyProvider {
             Enemy(name = "Emperor Palpatine", photo = "https://upload.wikimedia.org/wikipedia/en/8/8f/Emperor_RotJ.png"),
             Enemy(name = "Chewbacca", photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Solo-_A_Star_Wars_Story_Japan_Premiere_Red_Carpet-_Chewbacca.jpg/285px-Solo-_A_Star_Wars_Story_Japan_Premiere_Red_Carpet-_Chewbacca.jpg"),
             Enemy(name = "R2-D2", photo = "https://upload.wikimedia.org/wikipedia/en/3/39/R2-D2_Droid.png"),
-            Enemy(name = "C-3PO", photo = "https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png"))
+            Enemy(name = "C-3PO", photo = "https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png"),
+            )
+
+
+
+
         fun filterNameCharacter():ArrayList<String>{
             return EnemyList.map { userCharacter ->
                 userCharacter.name
@@ -24,6 +29,9 @@ class EnemyProvider {
             return EnemyList.map { userCharacter ->
                 userCharacter.photo
             }.toCollection(ArrayList())
+        }
+        fun getNameAndPhotoUrl(): List<Pair<String, String>> {
+            return EnemyList.map { enemy -> enemy.name to enemy.photo }
         }
     }
 }

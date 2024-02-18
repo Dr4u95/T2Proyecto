@@ -12,11 +12,10 @@ import com.bumptech.glide.Glide
 import es.iessaladillo.com.proyecto.R
 import java.util.Locale
 
-class EnemyAdapter(context: Context, private val values: ArrayList<String>, private val imageUrls: ArrayList<String>) :
-    ArrayAdapter<String>(context, -1, values) {
+class EnemyAdapter(context: Context,private var originalValues: List<Pair<String, String>>) :
+    ArrayAdapter<Pair<String, String>>(context, -1, originalValues) {
 
-    private var filteredValues = values.toList()
-    private var filteredImageUrls = imageUrls.toList()
+    private var filteredValues : MutableList<Pair<String, String>> = originalValues.toMutableList()
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val rowView = convertView ?: inflater.inflate(R.layout.item_enemy, parent, false)
@@ -24,9 +23,13 @@ class EnemyAdapter(context: Context, private val values: ArrayList<String>, priv
         val textView = rowView.findViewById<TextView>(R.id.nameItemEnemy)
         val imageView = rowView.findViewById<ImageView>(R.id.imgItemEnemy)
 
-        textView.text = filteredValues[position]
-        Glide.with(context).load(filteredImageUrls[position]).into(imageView)
+        textView.text = filteredValues[position].first
+        Glide.with(context).load(filteredValues[position].second).into(imageView)
         return rowView
+    }
+
+    override fun getCount(): Int {
+        return filteredValues.size
     }
 
     override fun getFilter(): Filter {
@@ -34,21 +37,23 @@ class EnemyAdapter(context: Context, private val values: ArrayList<String>, priv
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val results = FilterResults()
 
-                val filteredList = if (constraint.isNullOrBlank()) {
-                    values.toList()
+                if (constraint.isNullOrBlank()) {
+                    results.values = originalValues.toList()
                 } else {
                     val filterPattern = constraint.toString().lowercase(Locale.getDefault())
-                    values.filter { it.lowercase(Locale.getDefault()).contains(filterPattern) }
+                    val filteredList = originalValues.filter {
+                        it.first.lowercase(Locale.getDefault()).contains(filterPattern)
+                    }
+                    results.values = filteredList
                 }
 
-                results.values = filteredList
-                results.count = filteredList.size
                 return results
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 results?.let {
-                    filteredValues = it.values as List<String>
+                    filteredValues.clear()
+                    filteredValues.addAll(it.values as List<Pair<String, String>>)
                     notifyDataSetChanged()
                 }
             }

@@ -42,9 +42,8 @@ class BattleFragment : Fragment() {
     }
 
     private fun configureAdapter() {
-        val names = EnemyProvider.filterNameCharacter()
-        val images = EnemyProvider.filterPhotoCharacter()
-        adapter = EnemyAdapter(requireContext(),names,images)
+        val pair = EnemyProvider.getNameAndPhotoUrl()
+        adapter = EnemyAdapter(requireContext(),pair)
         binding.listEnemy.adapter = adapter
     }
 
